@@ -10,9 +10,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlet Properties
+    @IBOutlet var recordButton: UIButton?
+    @IBOutlet var stopButton: UIButton?
+    @IBOutlet var playButton: UIButton?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func viewDidAppear(_ animated: Bool) {
