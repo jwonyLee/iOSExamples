@@ -101,11 +101,7 @@ extension ViewController {
                 })
             case .denied: // 사용자가 녹음 권한 거부, 사용자가 직접 설정 화면에서 권한 허용을 하게끔 유도
                 print("[Failure] Record Permission is Denied.")
-                let alertViewController = UIAlertController(title: "Michrophone Error!",
-                                                            message: "Not Authorized to Access the Microphone!",
-                                                            preferredStyle: .alert)
-
-                alertViewController.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
+                let settingAction: UIAlertAction = UIAlertAction(title: "Settings", style: .default, handler: { _ in
                     DispatchQueue.main.async {
                         if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                             UIApplication.shared.open(settingsURL,
@@ -113,13 +109,9 @@ extension ViewController {
                                                       completionHandler: nil)
                         }
                     }
-                }))
-
-                alertViewController.addAction(UIAlertAction(title: "Cancle", style: .cancel) { _ in
-                    completion(false)
                 })
-
-                self.present(alertViewController, animated: true)
+                let cancleAction: UIAlertAction = UIAlertAction(title: "Cancle", style: .cancel)
+                self.showAlert(title: "Microphone Error!", message: "Not Authorized to Access the Microphone!", actions: cancleAction, settingAction)
             case .granted: // 사용자가 녹음 권한 허용
                 print("[Success] Record Permission is Granted.")
                 completion(true)
