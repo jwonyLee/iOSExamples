@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // 싱글톤 인스턴스 가져오기
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            // 오디오 세션 카테고리, 모드, 옵션 설정
+            try audioSession.setCategory(.playback, mode: .moviePlayback, options: [])
+        } catch {
+            print("Failed to set audio session category.")
+        }
         return true
     }
 

@@ -94,12 +94,6 @@ extension ViewController {
     private func requestMicrophoneAccess(completion: @escaping (Bool) -> Void) {
         do {
             let recordingSession: AVAudioSession = AVAudioSession.sharedInstance()
-            try recordingSession.setCategory(.playAndRecord, options: [.allowBluetooth,
-                                                                       .allowBluetoothA2DP,
-                                                                       .defaultToSpeaker])
-            try recordingSession.overrideOutputAudioPort(.none)
-            try recordingSession.setActive(true)
-
             switch recordingSession.recordPermission {
             case .undetermined: // 아직 녹음 권한 요청이 되지 않음, 사용자에게 권한 요청
                 recordingSession.requestRecordPermission({ allowed in
@@ -183,7 +177,6 @@ extension ViewController {
         if let recorder = audioRecorder {
             if !recorder.isRecording {
                 let audioSession = AVAudioSession.sharedInstance()
-                print(audioSession.outputVolume)
                 audioPlayer = try? AVAudioPlayer(contentsOf: recorder.url)
                 audioPlayer?.volume = audioSession.outputVolume
                 audioPlayer?.delegate = self
