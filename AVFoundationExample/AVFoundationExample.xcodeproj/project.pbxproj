@@ -13,6 +13,7 @@
 		875F9EB926876F9D006EECEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875F9EB726876F9D006EECEB /* Main.storyboard */; };
 		875F9EBB26876F9F006EECEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875F9EBA26876F9F006EECEB /* Assets.xcassets */; };
 		875F9EBE26876F9F006EECEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875F9EBC26876F9F006EECEB /* LaunchScreen.storyboard */; };
+		876CC4AF2694933C007E47DC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CC4AE2694933C007E47DC /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		875F9EBA26876F9F006EECEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		875F9EBD26876F9F006EECEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		875F9EBF26876F9F006EECEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876CC4AE2694933C007E47DC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		875F9EB026876F9D006EECEB /* AVFoundationExample */ = {
 			isa = PBXGroup;
 			children = (
+				876CC4AD26949322007E47DC /* Utilities */,
 				875F9EB126876F9D006EECEB /* AppDelegate.swift */,
 				875F9EB326876F9D006EECEB /* SceneDelegate.swift */,
 				875F9EB526876F9D006EECEB /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				875F9EBF26876F9F006EECEB /* Info.plist */,
 			);
 			path = AVFoundationExample;
+			sourceTree = "<group>";
+		};
+		876CC4AD26949322007E47DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				876CC4AE2694933C007E47DC /* UIViewController+.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				875F9EB626876F9D006EECEB /* ViewController.swift in Sources */,
 				875F9EB226876F9D006EECEB /* AppDelegate.swift in Sources */,
+				876CC4AF2694933C007E47DC /* UIViewController+.swift in Sources */,
 				875F9EB426876F9D006EECEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
