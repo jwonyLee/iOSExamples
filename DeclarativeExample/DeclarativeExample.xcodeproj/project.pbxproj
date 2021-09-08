@@ -26,6 +26,7 @@
 		87E976A426E89BDC000452B7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 87E976A326E89BDC000452B7 /* RxBlocking */; };
 		87E976A626E89D39000452B7 /* UITextField+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E976A526E89D39000452B7 /* UITextField+Chainable.swift */; };
 		87E976A826E89EAF000452B7 /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E976A726E89EAF000452B7 /* UIButton+Chainable.swift */; };
+		87E976AA26E8AF1F000452B7 /* UIStackView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E976A926E8AF1F000452B7 /* UIStackView+Chainable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		87E9769A26E89AE3000452B7 /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
 		87E976A526E89D39000452B7 /* UITextField+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Chainable.swift"; sourceTree = "<group>"; };
 		87E976A726E89EAF000452B7 /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
+		87E976A926E8AF1F000452B7 /* UIStackView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chainable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				87E9768926E896B8000452B7 /* SnapKit+Chainable.swift */,
 				87E976A526E89D39000452B7 /* UITextField+Chainable.swift */,
 				87E976A726E89EAF000452B7 /* UIButton+Chainable.swift */,
+				87E976A926E8AF1F000452B7 /* UIStackView+Chainable.swift */,
 			);
 			path = Chainable;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				87E9766E26E88F6A000452B7 /* ViewController.swift in Sources */,
 				87E9768526E894D5000452B7 /* UILabel+Chainable.swift in Sources */,
+				87E976AA26E8AF1F000452B7 /* UIStackView+Chainable.swift in Sources */,
 				87E9768126E891E7000452B7 /* Int+Chainable.swift in Sources */,
 				87E9768326E89285000452B7 /* UIView+Chainable.swift in Sources */,
 				87E9767F26E89191000452B7 /* Chainable.swift in Sources */,

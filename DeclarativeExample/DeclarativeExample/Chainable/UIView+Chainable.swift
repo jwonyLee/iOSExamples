@@ -21,9 +21,17 @@ extension Chain where Origin: UIView {
         return self
     }
 
-    func add(to parent: UIView) -> Chain {
-        parent.addSubview(origin)
+    func add<Parent: UIView>(to parent: Parent) -> Chain {
+        if let stackParent = parent as? UIStackView {
+            stackParent.addArrangedSubview(origin)
+        } else {
+            parent.addSubview(origin)
+        }
         return self
+    }
+
+    func add<V: UIView>(to parentChain: Chain<V>) -> Chain {
+        return add(to: parentChain.origin)
     }
 
     func apply(_ block: (Origin) -> Void) -> Chain {
