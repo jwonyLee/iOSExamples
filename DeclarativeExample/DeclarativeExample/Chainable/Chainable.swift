@@ -22,3 +22,20 @@ extension Chainable {
         return Chain(origin: self)
     }
 }
+
+protocol ChainAny {
+    var anyObject: Any { get }
+}
+
+extension Chain: ChainAny {
+    var anyObject: Any {
+        return origin
+    }
+}
+
+extension Chain {
+    func store(to target: inout Origin?) -> Chain {
+        target = origin
+        return self
+    }
+}

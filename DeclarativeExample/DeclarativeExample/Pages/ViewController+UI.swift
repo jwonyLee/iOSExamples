@@ -38,14 +38,18 @@ extension ViewController {
                     .keyboard(type: .emailAddress)
                     .constraint {
                         $0.height.equalTo(40)
-                    }.origin,
+                    }
+                    .store(to: &emailField)
+                    .origin,
 
                  UITextField().chain
                     .borderStyle(.roundedRect)
                     .secure()
                     .constraint {
                         $0.height.equalTo(40)
-                    }.origin,
+                    }
+                    .store(to: &passwordField)
+                    .origin,
 
                  Spacer(height: 30).origin,
 
@@ -58,38 +62,9 @@ extension ViewController {
                     .cornerRadius(12)
                     .constraint {
                         $0.height.equalTo(60)
-                    }.origin
+                    }
+                    .store(to: &loginButton)
+                    .origin
             )
-
-        //        emailField = UITextField().chain
-        //            .add(to: stack)
-        //            .borderStyle(.roundedRect)
-        //            .keyboard(type: .emailAddress)
-        //            .constraint {
-        //                $0.height.equalTo(40)
-        //            }
-        //            .origin
-        //
-        //        passwordField = UITextField().chain
-        //            .add(to: stack)
-        //            .borderStyle(.roundedRect)
-        //            .secure()
-        //            .constraint {
-        //                $0.height.equalTo(40)
-        //            }
-        //            .origin
-        //
-        //        loginButton = UIButton().chain
-        //            .add(to: stack)
-        //            .title("LOG IN")
-        //            .title("Fill Field", for: .disabled)
-        //            .titleFont(size: 24, weight: .bold)
-        //            .titleColor(.white)
-        //            .background(color: .brown)
-        //            .cornerRadius(12)
-        //            .constraint {
-        //                $0.height.equalTo(60)
-        //            }
-        //            .origin
     }
 }
