@@ -12,6 +12,10 @@
 		87E9766E26E88F6A000452B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9766D26E88F6A000452B7 /* ViewController.swift */; };
 		87E9767326E88F6C000452B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E9767226E88F6C000452B7 /* Assets.xcassets */; };
 		87E9767626E88F6C000452B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E9767426E88F6C000452B7 /* LaunchScreen.storyboard */; };
+		87E9767F26E89191000452B7 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9767E26E89191000452B7 /* Chainable.swift */; };
+		87E9768126E891E7000452B7 /* Int+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9768026E891E7000452B7 /* Int+Chainable.swift */; };
+		87E9768326E89285000452B7 /* UIView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9768226E89285000452B7 /* UIView+Chainable.swift */; };
+		87E9768526E894D5000452B7 /* UILabel+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9768426E894D5000452B7 /* UILabel+Chainable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		87E9767226E88F6C000452B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87E9767526E88F6C000452B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87E9767726E88F6C000452B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87E9767E26E89191000452B7 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
+		87E9768026E891E7000452B7 /* Int+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Chainable.swift"; sourceTree = "<group>"; };
+		87E9768226E89285000452B7 /* UIView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Chainable.swift"; sourceTree = "<group>"; };
+		87E9768426E894D5000452B7 /* UILabel+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Chainable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		87E9766826E88F6A000452B7 /* DeclarativeExample */ = {
 			isa = PBXGroup;
 			children = (
+				87E9767D26E89180000452B7 /* Chainable */,
 				87E9766926E88F6A000452B7 /* AppDelegate.swift */,
 				87E9766B26E88F6A000452B7 /* SceneDelegate.swift */,
 				87E9766D26E88F6A000452B7 /* ViewController.swift */,
@@ -62,6 +71,17 @@
 				87E9767726E88F6C000452B7 /* Info.plist */,
 			);
 			path = DeclarativeExample;
+			sourceTree = "<group>";
+		};
+		87E9767D26E89180000452B7 /* Chainable */ = {
+			isa = PBXGroup;
+			children = (
+				87E9767E26E89191000452B7 /* Chainable.swift */,
+				87E9768026E891E7000452B7 /* Int+Chainable.swift */,
+				87E9768226E89285000452B7 /* UIView+Chainable.swift */,
+				87E9768426E894D5000452B7 /* UILabel+Chainable.swift */,
+			);
+			path = Chainable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87E9766E26E88F6A000452B7 /* ViewController.swift in Sources */,
+				87E9768526E894D5000452B7 /* UILabel+Chainable.swift in Sources */,
+				87E9768126E891E7000452B7 /* Int+Chainable.swift in Sources */,
+				87E9768326E89285000452B7 /* UIView+Chainable.swift in Sources */,
+				87E9767F26E89191000452B7 /* Chainable.swift in Sources */,
 				87E9766A26E88F6A000452B7 /* AppDelegate.swift in Sources */,
 				87E9766C26E88F6A000452B7 /* SceneDelegate.swift in Sources */,
 			);
