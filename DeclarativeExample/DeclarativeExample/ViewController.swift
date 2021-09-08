@@ -15,33 +15,41 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
 
-        _ = UIView().chain
+        let red = UIView().chain
             .add(to: view)
             .background(color: .red)
             .cornerRadius(8)
-            .size(width: 100, height: 100)
-            .position(x: 50, y: 50)
+            .constraint {
+                $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
+            .origin
 
-        _ = UIView().chain
-            .add(to: view)
+        let green = UIView().chain
+            .add(to: red)
             .background(color: .green)
             .cornerRadius(16)
-            .size(width: 100, height: 100)
-            .position(x: 80, y: 80)
+            .constraint {
+                $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
+            .origin
 
         _ = UIView().chain
-            .add(to: view)
+            .add(to: green)
             .background(color: .blue)
             .cornerRadius(32)
-            .size(width: 100, height: 100)
-            .position(x: 120, y: 120)
+            .constraint {
+                $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
+            .origin
 
         _ = UILabel().chain
             .add(to: view)
             .text("Hello, World!")
             .font(size: 32, weight: .medium)
             .color(.cyan)
-            .position(x: 100, y: 250)
+            .constraint {
+                $0.center.equalToSuperview()
+            }
     }
 
 
