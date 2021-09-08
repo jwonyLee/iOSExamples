@@ -37,3 +37,10 @@ func HStackView() -> Chain<UIStackView> {
 func VStackView() -> Chain<UIStackView> {
     return UIStackView().chain.axis(.vertical)
 }
+
+func Spacer(width: CGFloat? = nil, height: CGFloat? = nil) -> Chain<UIView> {
+    return UIView().chain.constraint {
+        if let w = width { $0.width.equalTo(w) }
+        if let h = height { $0.height.equalTo(h) }
+    }
+}
