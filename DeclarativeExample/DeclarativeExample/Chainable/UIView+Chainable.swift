@@ -26,24 +26,8 @@ extension Chain where Origin: UIView {
         return self
     }
 
-    func size(width: CGFloat, height: CGFloat) -> Chain {
-        origin.translatesAutoresizingMaskIntoConstraints = false
-        origin.widthAnchor.constraint(equalToConstant: width).isActive = true
-        origin.heightAnchor.constraint(equalToConstant: height).isActive = true
-        return self
-    }
-
-    func size(_ size: CGSize) -> Chain {
-        return self.size(width: size.width, height: size.height)
-    }
-
-    func position(x: CGFloat, y: CGFloat) -> Chain {
-        guard let parent = origin.superview else {
-            return self
-        }
-        origin.translatesAutoresizingMaskIntoConstraints = false
-        origin.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: x).isActive = true
-        origin.topAnchor.constraint(equalTo: parent.topAnchor, constant: y).isActive = true
+    func apply(_ block: (Origin) -> Void) -> Chain {
+        block(origin)
         return self
     }
 }
